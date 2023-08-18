@@ -1,0 +1,5 @@
+<h1>Wikipedia Scraper</h1>
+<%= form_with url: '/scrape', method: :get do |form| %>
+  <%= form.text_field :wikipedia_link, placeholder: 'Enter Wikipedia link', required: true %>
+  <%= form.submit 'Scrape' %>
+<% end %>

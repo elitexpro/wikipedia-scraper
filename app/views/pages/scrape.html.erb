@@ -1,0 +1,18 @@
+
+<% if @data %>
+  <h2>Title: <%= @data[:title] %></h2>
+  <h3>Languages:</h3>
+  <ul>
+    <% @data[:languages].each do |language| %>
+      <li><%= language %></li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>No data to display.</p>
+<% end %>
+
+<% if flash.now[:error] %>
+  <div class="alert alert-danger">
+    <%= flash.now[:error] %>
+  </div>
+<% end %>
